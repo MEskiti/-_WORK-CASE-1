@@ -36,7 +36,7 @@ Core Actions and Commands:
 
 Task 2: What is a Commit?
 
-This part made by Kostya Vasin
+|This part made by Kostya Vasin
 
 A commit is the fundamental unit of data storage in Git.
 It represents a logically complete snapshot of all project files at a specific point in time.
@@ -58,8 +58,8 @@ During commit creation, Git compares the new commit's tree object hash with the 
 If a file hash differs, Git performs a line-by-line comparison and calculates the exact diff (added + or removed - lines).
 Data Integrity (Immutability): Due to cryptographic hashing, commit history is immutable. Altering an old commit changes its hash and invalidates subsequent linked commits, ensuring complete reliability when auditing code changes.
 
-
-This part is made by Oleksiy Orlov and Kostya Vasin
+Conclusion
+|This part is made by Oleksiy Orlov and Kostya Vasin
 
 During the completion of Work-case #1, we mastered the core principles of using the Git distributed version control system and the GitHub platform. In the theoretical section, we studied essential Git commands for repository initialization, staging, and committing, alongside analyzing commit object structures and the three-state architecture (Working Directory, Staging Area, and Git Repository).
 
