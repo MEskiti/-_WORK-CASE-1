@@ -10,6 +10,26 @@ git init — Creates a new empty local repository in the current directory (crea
 
 git clone <URL> — Downloads a copy of an existing remote repository from a server (GitHub, GitLab, etc.) to a local machine.
 
+git status — Displays the current state of the working directory (untracked, modified, or staged files).
+
+git add <file> — Adds a specific file to the Staging Area (Index).
+
+git commit -m "Change description" — Creates a new commit from staged changes with a short description.
+
+git log — Lists all commits in the current branch with their hashes, authors, dates, and messages.
+
+git push <remote> <branch> — Uploads local commits to a remote repository.
+
+git fetch — Downloads new data from a remote repository without merging it into local code.
+
+git pull — Downloads new changes from a remote repository and automatically merges them into the current branch(git fetch + git merge).
+
+git branch <branch-name> — Creates a new branch.
+
+git checkout <branch-name> — Switches the working environment to the specified branch.
+
+git merge <branch-name> — Merges the specified branch into the current one.
+
 
 
 
