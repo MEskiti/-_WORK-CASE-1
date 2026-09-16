@@ -72,9 +72,11 @@ Core Actions and Commands:
 
 
 
+##Task 2: What is a Commit?
 
+This part made by Kostya Vasin
 
-##What is a Commit? A commit is the fundamental unit of data storage in Git.
+A commit is the fundamental unit of data storage in Git.
 It represents a logically complete snapshot of all project files at a specific point in time.
 
 Unlike centralized version control systems, Git does not store commits as a list of file deltas or patches.
