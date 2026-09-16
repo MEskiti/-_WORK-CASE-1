@@ -1,5 +1,9 @@
 
-#  Заголовок 1-го рівня
+Task 1: Purpose of Git, Core Concepts, and Basic Commands
+
+Purpose of Git
+Git is a Distributed Version Control System (DVCS) created by Linus Torvalds in 2005 to manage Linux kernel development. Its main purpose is to ensure high speed, data integrity, and support for non-linear development workflows involving thousands of parallel branches.
+
 
 
 
