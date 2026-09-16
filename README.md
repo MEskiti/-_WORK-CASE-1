@@ -1,34 +1,35 @@
 
 Task 1: Purpose of Git, Core Concepts, and Basic Commands
+|This part is made by Oleksiy Orlov
 
 Purpose of Git
 Git is a Distributed Version Control System (DVCS) created by Linus Torvalds in 2005 to manage Linux kernel development. Its main purpose is to ensure high speed, data integrity, and support for non-linear development workflows involving thousands of parallel branches.
 
 Core Actions and Commands:
 
-git init — Creates a new empty local repository in the current directory (creates a hidden .git folder).
+'git init' — Creates a new empty local repository in the current directory (creates a hidden .git folder).
 
-git clone <URL> — Downloads a copy of an existing remote repository from a server (GitHub, GitLab, etc.) to a local machine.
+'git clone <URL>' — Downloads a copy of an existing remote repository from a server (GitHub, GitLab, etc.) to a local machine.
 
-git status — Displays the current state of the working directory (untracked, modified, or staged files).
+'git status' — Displays the current state of the working directory (untracked, modified, or staged files).
 
-git add <file> — Adds a specific file to the Staging Area (Index).
+'git add <file>' — Adds a specific file to the Staging Area (Index).
 
-git commit -m "Change description" — Creates a new commit from staged changes with a short description.
+'git commit' -m "Change description" — Creates a new commit from staged changes with a short description.
 
-git log — Lists all commits in the current branch with their hashes, authors, dates, and messages.
+'git log' — Lists all commits in the current branch with their hashes, authors, dates, and messages.
 
-git push <remote> <branch> — Uploads local commits to a remote repository.
+'git push <remote> <branch>' — Uploads local commits to a remote repository.
 
-git fetch — Downloads new data from a remote repository without merging it into local code.
+'git fetch' — Downloads new data from a remote repository without merging it into local code.
 
-git pull — Downloads new changes from a remote repository and automatically merges them into the current branch(git fetch + git merge).
+'git pull' — Downloads new changes from a remote repository and automatically merges them into the current branch(git fetch + git merge).
 
-git branch <branch-name> — Creates a new branch.
+'git branch <branch-name>' — Creates a new branch.
 
-git checkout <branch-name> — Switches the working environment to the specified branch.
+'git checkout <branch-name>' — Switches the working environment to the specified branch.
 
-git merge <branch-name> — Merges the specified branch into the current one.
+'git merge <branch-name>' — Merges the specified branch into the current one.
 
 
 
