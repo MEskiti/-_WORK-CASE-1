@@ -34,25 +34,6 @@ Core Actions and Commands:
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 Task 2: What is a Commit?
 
 This part made by Kostya Vasin
@@ -78,6 +59,11 @@ If a file hash differs, Git performs a line-by-line comparison and calculates th
 Data Integrity (Immutability): Due to cryptographic hashing, commit history is immutable. Altering an old commit changes its hash and invalidates subsequent linked commits, ensuring complete reliability when auditing code changes.
 
 
+This part is made by Oleksiy Orlov and Kostya Vasin
+
+During the completion of Work-case #1, we mastered the core principles of using the Git distributed version control system and the GitHub platform. In the theoretical section, we studied essential Git commands for repository initialization, staging, and committing, alongside analyzing commit object structures and the three-state architecture (Working Directory, Staging Area, and Git Repository).
+
+On the practical side, we successfully established a collaborative workflow by creating and configuring a shared public repository for the "Operating Systems" course. Collaborators were added with editing permissions, and a team Markdown report (README.md) was uploaded. Each team member submitted individual commits, demonstrating practical proficiency in version control management and collaborative code synchronization.
 
 
 
@@ -98,4 +84,5 @@ Data Integrity (Immutability): Due to cryptographic hashing, commit history is i
 
 
 
-Командна робота Васіна Костяина і Орлова Олексія 
+Team work Kostya Vasin and Oleksiy Orlov
+
