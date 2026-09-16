@@ -1,5 +1,5 @@
 
-#Task 1: Purpose of Git, Core Concepts, and Basic Commands
+Task 1: Purpose of Git, Core Concepts, and Basic Commands
 
 |This part is made by Oleksiy Orlov
 
@@ -53,26 +53,7 @@ Core Actions and Commands:
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-##Task 2: What is a Commit?
+Task 2: What is a Commit?
 
 This part made by Kostya Vasin
 
