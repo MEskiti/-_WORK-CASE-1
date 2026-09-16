@@ -57,6 +57,7 @@
 
 
 ##What is a Commit? A commit is the fundamental unit of data storage in Git. It represents a logically complete snapshot of all project files at a specific point in time.
+
 Unlike centralized version control systems, Git does not store commits as a list of file deltas or patches.
 Instead, Git takes a snapshot of what all files in the project look like at that moment and stores a reference to that snapshot.
 If a file hasn't changed, Git links to the previously stored copy rather than duplicating it
