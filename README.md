@@ -1,5 +1,6 @@
 
 Task 1: Purpose of Git, Core Concepts, and Basic Commands
+
 |This part is made by Oleksiy Orlov
 
 Purpose of Git
