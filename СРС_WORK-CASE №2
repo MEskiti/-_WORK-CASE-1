@@ -1,14 +1,12 @@
-1. 
-|This part made by Kostya Vasin
- Встановлення гіпервізора II типу (Oracle VM VirtualBox):
- Для виконання завдання обрано гіпервізор II типу Oracle VM VirtualBox (версія 7.x) через його кросплатформеність, відкритість та багатий функціонал для роботи з віртуальними мережами.
- Завантажено інсталяційний пакет з офіційного сайту virtualbox.org.
- Виконано встановлення з дефолтними параметрами.
- Додатково встановлено Oracle VM VirtualBox Extension Pack для підтримки пристроїв USB 2.0/USB 3.0 та прокидання зовнішніх носіїв.
+Васін Костя 
+1. Встановлення гіпервізора II типу VirtualBox
+Для виконання завдання обрано гіпервізор II типу VirtualBox  через його кросплатформеність, відкритість та багатий функціонал для роботи з віртуальними мережами.
+Завантажено інсталяційний пакет з офіційного сайту virtualbox.org.
+Виконано встановлення з дефолтними параметрами.
+Додатково встановлено VirtualBox Extension Pack для підтримки пристроїв USB 2.0/USB 3.0 та прокидання зовнішніх носіїв.
 
-2.
-|This part is made by Oleksiy Orlov
- Створення нової віртуальної машини:
+Орлов Олексій
+2.Створення нової віртуальної машини:
 
   Відкрийте VirtualBox і натисніть кнопку Створити (або комбінацію клавіш Ctrl + N).
   Вкажіть назву машини (наприклад, Ubuntu-Linux), виберіть папку для збереження та вкажіть шлях до завантаженого ISO-образу операційної системи.
@@ -35,19 +33,65 @@
   У налаштуваннях ВМ відкрийте розділ USB, увімкніть контролер (USB 2.0 або USB 3.0).
   Натисніть кнопку з плюсом («Додати новий фільтр USB») і виберіть вашу флешку зі списку — після запуску ВМ вона автоматично змонтується всередині віртуальної системи.
 
-
-
-
-
-
-
-
-
-
+Васін Костя
 4. Встановлення мінімальної ОС, GNOME та другого GUI (ВМ №2)
-4.1. Встановлення ОС у мінімальній конфігурації (CLI)
+Встановлення ОС у мінімальній конфігурації (CLI)
 Дистрибутив: Ubuntu Server 24.04 LTS (без графічного оточення).
 Хід встановлення:
 Створено другу ВМ (Ubuntu_CLI_KSM) з 2 ГБ RAM та 20 ГБ HDD.
 Під час встановлення обрано варіант Ubuntu Server (Minimised).
 Графічний інтерфейс свідомо не встановлювався. Після перезавантаження отримано доступ виключно до консолі (Terminal / TTY).
+
+Встановлення графічної оболонки GNOME поверх CLI
+Оновлено списки пакетів у терміналі:
+
+sudo apt update && sudo apt upgrade -y
+Встановлено базовий пакет GNOME Desktop та дисплейний менеджер GDM3:
+
+sudo apt install ubuntu-desktop-minimal -y
+Запущено графічну службу або перезавантажено систему:
+
+sudo systemctl set-default graphical.target
+sudo reboot
+Після перезавантаження з'явилося графічне вікно входу GDM3 та робочий стіл GNOME.
+
+4.3. Встановлення другої графічної оболонки (XFCE) та їх порівняння
+Для порівняння обрано легку графічну оболонку XFCE.
+
+Встановлення XFCE та дисплейного менеджера LightDM у терміналі:
+
+sudo apt install xfce4 xfce4-goodies -y
+Під час встановлення система запропонувала вибрати за замовчуванням gdm3 або lightdm (обрано gdm3).
+
+Після завершення виходу з сеансу на екрані логіну обрано сесію Xfce Session.
+Порівняльна таблиця можливостей GNOME та XFCE:
+
+Використання RAM (на старті) ~1.2 – 1.6 ГБ(GNOME) та ~500 – 700 МБ(XFCE)
+Навантаження на CPU Помірне / Високе (потребує 3D acceleration) та Низьке (чудово працює на слабкому $vCPU$)
+Концепція інтерфейсу Сучасна, планшетно-орієнтована (Activities Overview, жести) та Класична (Панель задач, Меню «Пуск», ярлики)
+Кастомізація Через розширення (GNOME Extensions), обмежена «з коробки»; Дуже гнучка безпосередньо через налаштування
+Швидкодія у ВМ Вимагає достатньо відеопам'яті та прискорення та Працює максимально плавно навіть при 1 ГБ RAM
+5. Glossary / Словник англійських термінів
+Hypervisor (Type 2) — Software that runs virtual machines on top of an existing host operating system (e.g., VirtualBox, VMware Workstation).
+Host OS — The primary operating system installed on the physical computer hardware.
+Guest OS — The operating system running inside a virtual machine environment.
+Virtual Machine (VM) — An emulation of a computer system that provides the functionality of a physical computer.
+Bridged Networking — A network connection mode where the VM acts as a separate physical device on the local network.
+NAT (Network Address Translation) — A network mode allowing the VM to share the host system's IP address to access external networks.
+CLI (Command Line Interface) — A text-based user interface used to view and manage computer files and execute commands.
+GUI (Graphical User Interface) — A visual system of interactive components such as windows, icons, and menus.
+Desktop Environment (DE) — An implementation of the graphical user interface bundling desktop widgets, window managers, and integrated applications (e.g., GNOME, XFCE).
+Passthrough (USB) — A technology that allows a virtual machine to directly access physical hardware connected to the host.
+
+6. Conclusion
+Васін Костя
+During this work-case, I successfully deployed and configured a Type 2 Hypervisor (Oracle VM VirtualBox) on my workstation. 
+I learned how to create virtual machines, allocate virtual hardware resources (vCPU, RAM, VDI storage),and 
+configure network interfaces using both NAT and Bridged modes to connect to local Wi-Fi networks.
+Additionally, USB passthrough functionality was implemented for seamless interaction with external flash drives.
+
+Орлов Олексій
+Furthermore, I deployed two Linux instances: one standard Ubuntu Desktop with a pre-configured GUI and another minimal Ubuntu Server CLI installation.
+By installing the GNOME Desktop Environment over the CLI system, I gained hands-on experience in managing display managers and core desktop software via terminal commands. 
+Installing and testing the lightweight XFCE desktop environment allowed me to perform a practical comparative analysis. 
+The comparison revealed that while GNOME provides a modern and polished user experience, XFCE significantly reduces system resource consumption (RAM and CPU), making it a superior choice for resource-constrained virtual environments.
