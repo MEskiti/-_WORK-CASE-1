@@ -1,3 +1,17 @@
+Словник термінів
+
+Cloning — створення копії віртуальної машини.
+
+Export (Appliance) — збереження ВМ у портативний формат (.ova) для перенесення.
+
+Hypervisor — програмне забезпечення для створення та запуску віртуальних машин.
+
+Bridged Adapter — режим підключення ВМ напряму до фізичної мережі.
+
+Host-only Network — ізольована мережа лише між хостом і гостьовими ВМ.
+
+Shared Folder — спільна папка для обміну файлами між хостом і віртуальною ОС.
+
 1. 1
 
 Орлов Олексій
@@ -110,3 +124,6 @@ Drag and Drop: Перетягніть файл мишею з вікна вірт
 Мережеві протоколи (SCP / FTP / пошта): За відсутності налаштованого Drag and Drop можна надіслати файл через пошту, локальний месенджер або скористатися протоколом SSH/SCP (команда scp)
 
 ![Image alt](https://github.com/MEskiti/-_WORK-CASE-1/blob/main/2026-10-12_162508.png)
+
+Conclusion
+In this practical work, I mastered virtual machine cloning and export using the .ova format for cross-platform migration. I also explored network adapter modes (NAT, Bridged, Host-only, Internal Network) and successfully configured local connectivity, shared folders, and data exchange between my host and virtual systems. Overall, the objectives were fully achieved, strengthening my practical skills in virtualization and network administration.
