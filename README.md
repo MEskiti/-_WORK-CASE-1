@@ -126,4 +126,5 @@ Drag and Drop: Перетягніть файл мишею з вікна вірт
 ![Image alt](https://github.com/MEskiti/-_WORK-CASE-1/blob/main/2026-10-12_162508.png)
 
 Conclusion
+
 In this practical work, I mastered virtual machine cloning and export using the .ova format for cross-platform migration. I also explored network adapter modes (NAT, Bridged, Host-only, Internal Network) and successfully configured local connectivity, shared folders, and data exchange between my host and virtual systems. Overall, the objectives were fully achieved, strengthening my practical skills in virtualization and network administration.
