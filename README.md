@@ -82,7 +82,7 @@ ping 192.168.1.50
 Копіювання файлу зі спільної папки у домашній каталог робочої ВМ
 cp /media/sf_SharedFolder/document.txt ~/Desktop/
 
-![Image alt](https://https://github.com/MEskiti/-_WORK-CASE-1/blob/main/2026-10-12_162441.png)
+![Image alt](https://github.com/MEskiti/-_WORK-CASE-1/blob/main/2026-10-12_162441.png)
 
 4.
 
@@ -106,4 +106,4 @@ Drag and Drop: Перетягніть файл мишею з вікна вірт
 Через спільну папку: Скопіюйте файл у спільну директорію, після чого він стане миттєво доступним на хост-машині.
 Мережеві протоколи (SCP / FTP / пошта): За відсутності налаштованого Drag and Drop можна надіслати файл через пошту, локальний месенджер або скористатися протоколом SSH/SCP (команда scp)
 
-![Image alt](https://https://github.com/MEskiti/-_WORK-CASE-1/blob/main/2026-10-12_162508.png)
+![Image alt](https://github.com/MEskiti/-_WORK-CASE-1/blob/main/2026-10-12_162508.png)
