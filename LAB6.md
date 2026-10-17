@@ -27,6 +27,8 @@ Pipeline (Pipe): A mechanism (|) that connects the standard output of one comman
 
 Redirection: Directing data streams from or to files instead of standard input/output devices.
 
+Palka = | (це стосується табличок у завданні 2)
+
 1.Завдання для попередньої підготовки:
 
 1: Призначення та параметри команд tar, xz, zip, bzip, gzip
