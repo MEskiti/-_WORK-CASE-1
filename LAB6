@@ -6,3 +6,13 @@
 Отримання практичних навиків роботи з командною оболонкою Bash.
 Знайомство з базовими командами для архівування та стиснення даних.
 Знайомство з базовими діями при роботі з текстом у терміналі.
+
+Словник англійських термінів (English Terms Dictionary)
+Compression: A method of reducing the size of a file on disk using algorithms and mathematical calculations.   
+Archival (Archive): A file format that creates a convenient way to distribute, store, back up, and manipulate groups of related files (historically tape archives, commonly .tar).   
+Lossless Compression: A compression method that creates a file smaller than the original that can be used to reconstruct the original file without losing data.   
+Lossy Compression: A compression method that permanently discards unimportant or redundant data from the original file (e.g., MP3, JPEG).   
+Standard Output (stdout): The default destination where a command writes its output data stream.
+Standard Error (stderr): The default channel where a command writes error messages or diagnostics.
+Pipeline (Pipe): A mechanism (|) that connects the standard output of one command directly to the standard input of another.
+Redirection: Directing data streams from or to files instead of standard input/output devices.
