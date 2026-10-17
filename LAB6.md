@@ -102,13 +102,13 @@ tail: Виводить останні рядки файлу (за замовчу
 | Команда (контейнер) | Що виконує команда? | Який потік перенаправлення? |
 | :--- | :--- | :--- |
 |"echo ""It is a new story."" > story"|Записує текстовий рядок у файл story|stdout (>)|
-date > date.txt,Записує поточну дату та час у файл date.txt,stdout (>)
-cat file1 file2 file3 > bigfile,Об'єднує кілька файлів в один bigfile,stdout (>)
-ls -l >> directory,Додає результати виведення списку файлів у кінець файлу directory,stdout (>>)
-sort < file1_unsorted > file2_sorted,Сортує вміст file1_unsorted та записує у file2_sorted,stdin (<) та stdout (>)
-find -name '*.txt' > file.txt 2> /dev/null,"Шукає файли .txt, записує результат у file.txt, а помилки ігнорує",stdout (>) та stderr (2>)
-`cat file1_unsorted,sort > file2_sorted`,Передає вміст несортованого файлу через канал на сортування та зберігає результат
-`cat myfile,grep student,wc -l`
+|date > date.txt|Записує поточну дату та час у файл date.txt|stdout (>)|
+|cat file1 file2 file3 > bigfile|Об'єднує кілька файлів в один bigfile|stdout (>)|
+|ls -l >> directory|Додає результати виведення списку файлів у кінець файлу directory|stdout (>>)|
+|sort < file1_unsorted > file2_sorted|Сортує вміст file1_unsorted та записує у file2_sorted|stdin (<) та stdout (>)|
+|find -name '*.txt' > file.txt 2> /dev/null|"Шукає файли .txt, записує результат у file.txt, а помилки ігнорує"|stdout (>) та stderr (2>)|
+|cat file1_unsorted|sort > file2_sorted|Передає вміст несортованого файлу через канал на сортування та зберігає результат|
+|cat myfile|grep student|wc -l|
 
 3.Відповіді на запитання
 
