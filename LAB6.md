@@ -77,8 +77,13 @@ tail: Виводить останні рядки файлу (за замовчу
 | :--- | :--- |
 | mkdir mybackups | Створення нової директорії mybackups у домашньому каталозі користувача |   
 | tar -cvf mybackups/udev.tar /etc/udev | Об'єднання вмісту директорії /etc/udev в архів udev.tar у директорії mybackups (параметр -c — створення, -v — детальний вивід, -f — вказівка файлу) |   
-
-gzip sourcefileСтиснення файлу за допомогою gzip (створює sourcefile.gz)   bzip2 afileСтиснення файлу за допомогою bzip2 (створює afile.bz2)   xz fileСтиснення файлу за допомогою xz (створює file.xz)   tar czvf compressed.tar.gz directory1Створення tar-архіву та його стиснення за допомогою gzip   cat file1 file2Виведення вмісту файлів на екранhead -n 5 fileВиведення перших 5 рядків файлуgrep "text" fileПошук заданого тексту у файлі
+| gzip sourcefile | Стиснення файлу за допомогою gzip (створює sourcefile.gz) |
+| bzip2 afile | Стиснення файлу за допомогою bzip2 (створює afile.bz2) |
+|xz file | Стиснення файлу за допомогою xz (створює file.xz) |
+|tar czvf compressed.tar.gz directory1 | Створення tar-архіву та його стиснення за допомогою gzip |
+| cat file1 file2 | Виведення вмісту файлів на екран |
+|head -n 5 file | Виведення перших 5 рядків файлуgrep | 
+| "text" file | Пошук заданого тексту у файлі |
 
 3.Відповіді на запитання
 
