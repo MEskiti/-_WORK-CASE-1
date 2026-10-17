@@ -130,4 +130,4 @@ tail: Виводить останні рядки файлу (за замовчу
 
 4.Conclusions
 
-Під час виконання цієї лабораторної роботи я опанував практичні навички роботи з командною оболонкою Bash для архівування та стиснення даних у середовищі Linux, навчився ефективно використовувати утиліти tar, gzip, bzip2 та xz, а також розібрався з перенаправленням потоків, роботою каналів і базовою обробкою тексту в терміналі.
+During this laboratory work, I gained practical skills in using the Bash command-line shell for data archiving and compression in a Linux environment. I learned how to effectively utilize utilities such as tar, gzip, bzip2, and xz, and understood the trade-offs between compression speed, resource consumption, and archive size. Additionally, I mastered stream redirection, pipeline operations, and basic text processing in the terminal.
