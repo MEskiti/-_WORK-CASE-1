@@ -16,3 +16,7 @@ Standard Output (stdout): The default destination where a command writes its out
 Standard Error (stderr): The default channel where a command writes error messages or diagnostics.
 Pipeline (Pipe): A mechanism (|) that connects the standard output of one command directly to the standard input of another.
 Redirection: Directing data streams from or to files instead of standard input/output devices.
+
+1.Завдання для попередньої підготовки:
+
+2.Хід роботи
