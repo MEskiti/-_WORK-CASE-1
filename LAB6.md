@@ -101,7 +101,7 @@ tail: Виводить останні рядки файлу (за замовчу
 
 | Команда (контейнер) | Що виконує команда? | Який потік перенаправлення? |
 | :--- | :--- |
-"echo ""It is a new story."" > story",Записує текстовий рядок у файл story,stdout (>)
+|"echo ""It is a new story."" > story"|Записує текстовий рядок у файл story|stdout (>)|
 date > date.txt,Записує поточну дату та час у файл date.txt,stdout (>)
 cat file1 file2 file3 > bigfile,Об'єднує кілька файлів в один bigfile,stdout (>)
 ls -l >> directory,Додає результати виведення списку файлів у кінець файлу directory,stdout (>>)
