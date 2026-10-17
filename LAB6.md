@@ -96,8 +96,8 @@ tail: Виводить останні рядки файлу (за замовчу
 | cmd >> file 2>&1 | "Додає stdout у файл, а stderr спрямовує туди ж" |
 | cmd 2>&1 > /dev/null | "Перенаправляє stderr у вихідний stdout, а stdout знищує (направляючи в /dev/null)" |
 | cmd 2> /dev/null | "Знищує стандартний потік помилок, перенаправляючи його в пристрій /dev/null" |
-| cmd1 palka cmd2 | Передає вихідний потік (stdout) команди cmd1 на вхід (stdin) команді cmd2 |
-| cmd1 2>&1 palka cmd2 | "Передає і виведення, і помилки cmd1 як вхідні дані для cmd2" |
+| cmd1 `palka` cmd2 | Передає вихідний потік (stdout) команди cmd1 на вхід (stdin) команді cmd2 |
+| cmd1 2>&1 `palka` cmd2 | "Передає і виведення, і помилки cmd1 як вхідні дані для cmd2" |
 
 | Команда (контейнер) | Що виконує команда? | Який потік перенаправлення? |
 | :--- | :--- | :--- |
@@ -107,8 +107,8 @@ tail: Виводить останні рядки файлу (за замовчу
 |ls -l >> directory|Додає результати виведення списку файлів у кінець файлу directory|stdout (>>)|
 |sort < file1_unsorted > file2_sorted|Сортує вміст file1_unsorted та записує у file2_sorted|stdin (<) та stdout (>)|
 |find -name '*.txt' > file.txt 2> /dev/null|"Шукає файли .txt, записує результат у file.txt, а помилки ігнорує"|stdout (>) та stderr (2>)|
-|cat file1_unsorted|sort > file2_sorted|Передає вміст несортованого файлу через канал на сортування та зберігає результат|
-|cat myfile|grep student|wc -l|
+|cat file1_unsorted `palka` sort > file2_sorted|Передає вміст несортованого файлу через канал на сортування та зберігає результат|
+|cat myfile `palka` grep `palka` student wc -l|
 
 3.Відповіді на запитання
 
