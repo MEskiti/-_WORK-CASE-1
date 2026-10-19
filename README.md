@@ -6,23 +6,23 @@
 
 Словник англ. термінів:
 
-Package — an archive file containing software binaries, libraries, and metadata required for installation.
+Package - an archive file containing software binaries, libraries, and metadata required for installation.
 
-Repository — a centralized server where software packages are hosted and maintained for download.
+Repository - a centralized server where software packages are hosted and maintained for download.
 
-Package Manager — a tool that automates installing, upgrading, configuring, and removing software.
+Package Manager - a tool that automates installing, upgrading, configuring, and removing software.
 
-Dependency — a software module or library required by another package to function properly.
+Dependency - a software module or library required by another package to function properly.
 
-CLI (Command Line Interface) — a text-based interface used to execute system commands directly.
+CLI (Command Line Interface) - a text-based interface used to execute system commands directly.
 
-GUI (Graphical User Interface) — a visual interface allowing interaction via windows, icons, and buttons.
+GUI (Graphical User Interface) - a visual interface allowing interaction via windows, icons, and buttons.
 
-Update — refreshing local package lists from repositories.
+Update - refreshing local package lists from repositories.
 
-Upgrade — installing newer versions of already installed software packages.
+Upgrade - installing newer versions of already installed software packages.
 
-Purge — removing a package completely along with all its configuration files.
+Purge - removing a package completely along with all its configuration files.
 
 1. Основні поняття та огляд менеджерів пакетів
 
