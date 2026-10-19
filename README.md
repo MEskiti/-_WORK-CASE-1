@@ -28,7 +28,7 @@ Zypper: Офіційний менеджер пакетів для openSUSE та 
 
 3.
 
-4.Методи встановлення через GUI:
+4. Методи встановлення через GUI:
 
 Магазини додатків (App Center / GNOME Software / Ubuntu Software):
 
