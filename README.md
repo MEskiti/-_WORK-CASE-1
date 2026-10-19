@@ -26,8 +26,21 @@ Zypper: Офіційний менеджер пакетів для openSUSE та 
 
 2 та 3:
 
-![Image alt](https://github.com/MEskiti/-_WORK-CASE-1/blob/main/2026-10-17_201921.png)
+![Image alt]()
 
+![Image alt]()
+
+![Image alt]()
+
+![Image alt]()
+
+![Image alt]()
+
+![Image alt]()
+
+![Image alt]()
+
+![Image alt]()
 
 4. Методи встановлення через GUI:
 
