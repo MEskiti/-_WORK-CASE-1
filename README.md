@@ -68,3 +68,6 @@ Zypper: Офіційний менеджер пакетів для openSUSE та 
 Принцип роботи: Це потужна графічна оболочка для apt. Вона дозволяє здійснювати точковий пошук пакетів за назвою, станом та категоріями, керувати репозиторіями PPA та виконувати масові операції.
 
 Приклад: Запуск Synaptic, введення пароля адміністратора, знаходження пакету через кнопку «Search» (наприклад, geany або vlc), вибір пункту меню «Mark for Installation» (Позначити для встановлення) та застосування змін кнопкою «Apply».
+
+5. Conclusions:
+During Work-case 4, I gained practical experience with software and package management in Linux. I explored the core concepts of packages and repositories, and mastered working with the APT package manager in the command line. Using CLI commands, I successfully updated system package lists, searched for software, installed required applications (VLC media player and C++ build tools), and managed dependencies. Additionally, I reviewed graphical installation methods via App Centers and GUI package managers like Synaptic. These skills demonstrate flexible and effective system administration techniques in modern Linux environments.
