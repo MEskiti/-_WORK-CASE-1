@@ -2,6 +2,8 @@
 
 Тема: Менеджери пакетів та встановлення програмного забезпечення в ОС Linux
 
+|КСМ-43б|Орлов та Васін
+
 Словник англ. термінів:
 
 Package — an archive file containing software binaries, libraries, and metadata required for installation.
