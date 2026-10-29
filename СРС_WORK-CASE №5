@@ -91,3 +91,9 @@ lp ~/Desktop/document.txt
 Після завершення копіювання обов'язково безпечно розмонтуйте флешку перед її витягуванням:
 
 sudo umount /mnt/usb
+
+Conclusions:
+In this work-case, we examined how Linux manages peripherals through virtual device files in /dev,
+separating block storage like flash drives that require mounting into the VFS tree from character devices like printers handled by CUPS. 
+Compared to Windows with its isolated drive letters and external installers, Linux provides a far more cohesive approach by relying on a unified directory hierarchy,
+modular in-kernel drivers, and runtime event detection via udev.
