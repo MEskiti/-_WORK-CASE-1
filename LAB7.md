@@ -198,7 +198,7 @@ sudo lshw -short	Короткий перелік усього апаратног
 
 ![Image alt](https://github.com/MEskiti/-_WORK-CASE-1/blob/main/%D0%97%D0%BD%D1%96%D0%BC%D0%BE%D0%BA%20%D0%B5%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202026-11-01%20134355.png)
 
-![Image alt]()
+![Image alt](https://github.com/MEskiti/-_WORK-CASE-1/blob/main/%D0%97%D0%BD%D1%96%D0%BC%D0%BE%D0%BA%20%D0%B5%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202026-11-01%20133422.png)
 
-![Image alt]()
+![Image alt](https://github.com/MEskiti/-_WORK-CASE-1/blob/main/%D0%97%D0%BD%D1%96%D0%BC%D0%BE%D0%BA%20%D0%B5%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202026-11-01%20133617.png)
 
