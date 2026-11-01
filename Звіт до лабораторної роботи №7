@@ -3,40 +3,170 @@
 Дисципліна: Операційні системи Тема: Створення скриптових сценаріїв та визначення апаратної конфігурації системи
 Завдання попередньої підготовки
 Словник термінів (Glossary)
-<details> <summary>Розгорнути словник</summary>
-Term	Переклад / пояснення
-shell	командна оболонка, програма-інтерпретатор команд користувача
-shell script	скрипт: текстовий файл зі списком команд, що виконуються послідовно
-shebang (#!)	перший рядок скрипта зі шляхом до інтерпретатора, напр. #!/bin/bash
-interpreter	інтерпретатор, програма, що виконує текст скрипта
-executable	виконуваний (файл із дозволом на запуск)
-permission denied	«відмовлено в доступі»: файл не має права на виконання
-permissions	права доступу до файлу (читання, запис, виконання)
-$PATH	змінна зі списком каталогів, де шукаються виконувані файли
-variable	змінна: тимчасове сховище даних у скрипті
-conditional	умовний оператор (if, case)
-loop	цикл (for, while, until)
-argument	аргумент: значення, передане команді чи скрипту
-option / flag	параметр (опція) команди, напр. -h, -n
-output	вивід (результат роботи команди)
-echo	команда виведення тексту на екран
-append / redirect	додавання у файл / перенаправлення виводу (>, >>)
-pipe (|)	конвеєр: передача виводу однієї команди на вхід іншої
-text editor	текстовий редактор (nano, vi, vim)
-buffer	буфер: тимчасова область пам'яті (напр. для вирізаного тексту)
-cut / paste	вирізати / вставити (Ctrl+K, Ctrl+U у nano)
-motherboard	материнська плата
-CPU (processor)	центральний процесор
-RAM	оперативна пам'ять
-storage device	пристрій зберігання даних (HDD, SSD)
-partition	розділ диска
-mount	монтувати: під'єднати файлову систему до дерева каталогів
-mount point	точка монтування (каталог, до якого під'єднано ФС)
-file system	файлова система
-peripheral	периферійний пристрій
-kernel	ядро операційної системи
-boot	завантаження системи
-architecture	архітектура процесора (x86_64, ARM)
-bus	шина обміну даними між компонентами
-driver	драйвер пристрою
-MBR / GPT	схеми розмітки диска (Master Boot Record / GUID Partition Table)
+1. Тема та мета роботи
+
+Тема: Створення скриптових сценаріїв та визначення апаратної конфігурації системи.
+
+Мета роботи:
+
+Отримання практичних навичок роботи з командною оболонкою Bash.
+Знайомство з базовими діями при роботі зі скриптовими сценаріями.
+
+Матеріальне забезпечення: ПК типу IBM PC, ОС Windows + VirtualBox (Oracle), ОС GNU/Linux (Ubuntu), курс Cisco NetAcad NDG Linux Essentials.
+
+2. Словник термінів (Glossary)
+Term	Переклад	Meaning
+shell	оболонка	A program that takes commands from the user and passes them to the operating system
+script	скрипт, сценарій	A text file with a list of commands that are executed one by one
+shebang (#!)	шебанг	The first line of a script that tells the system which interpreter to use
+interpreter	інтерпретатор	A program that reads and executes the script (/bin/bash, /bin/sh, python3)
+executable	виконуваний файл	A file that has the execute (x) permission
+permission	право доступу	A rule that says who can read (r), write (w) or execute (x) a file
+chmod	change mode	A command that changes file permissions
+variable	змінна	A named place that stores temporary data inside a script
+environment variable	змінна середовища	A variable available to all child processes ($HOME, $PATH, $USER)
+$PATH	шлях пошуку	A list of directories where the shell looks for executable files
+argument	аргумент	A value passed to a command or script ($1, $2, ...)
+conditional	умовний оператор	A construction (if, case) that runs code only if a test is true
+loop	цикл	A construction (for, while) that repeats commands many times
+standard output (stdout)	стандартний вивід	The default stream where a program prints its results
+pipe (|)	канал, конвеєр	Sends the output of one command to the input of another
+exit status	код завершення	A number returned by a command (0 = success)
+hardware	апаратне забезпечення	Physical parts of a computer
+motherboard	материнська плата	The main board that connects all components of a computer
+chipset	чипсет	A set of chips that controls data flow between CPU, memory and devices
+firmware	мікропрограма	Low-level software stored in hardware (BIOS/UEFI)
+BIOS / UEFI	базова система вводу-виводу	Firmware that starts the hardware and loads the bootloader
+kernel	ядро	The core of the OS that manages hardware and processes
+driver / kernel module	драйвер / модуль ядра	Code that lets the kernel work with a device
+block device	блочний пристрій	A device that reads and writes data in blocks (HDD, SSD, USB drive)
+partition	розділ диска	A logical part of a physical disk
+file system	файлова система	A way of storing and organizing files on a partition (ext4, NTFS, FAT32)
+MBR	Master Boot Record	An old partition table scheme (up to 2 TiB, 4 primary partitions)
+GPT	GUID Partition Table	A modern partition table scheme used with UEFI
+mount	монтувати	To attach a file system to a directory in the file tree
+unmount	демонтувати	To safely detach a file system from the file tree
+mount point	точка монтування	A directory where a file system is attached
+RAM	оперативна пам'ять	Fast volatile memory used by running programs
+swap	розділ/файл підкачки	Disk space used as extra memory when RAM is full
+buffer / cache	буфер / кеш	Memory used to speed up access to data
+3. Завдання попередньої підготовки
+4.1. Поняття скриптового сценарію у командній оболонці
+
+Скриптовий сценарій (shell script) - це текстовий файл, у якому записана послідовність команд оболонки. Під час запуску оболонка (інтерпретатор) читає файл і виконує команди одну за одною.
+
+Основні властивості:
+
+скрипт має доступ до всіх команд оболонки, а також до змінних, умов і циклів, тому може змінювати свою поведінку залежно від результату (наприклад, перевіряти наявність файлу);
+автоматизує рутинні дії: п'ять команд, які виконуються щодня, можна звести до однієї команди запуску скрипта;
+забезпечує повторюваність результату;
+перший рядок може вказувати інтерпретатор (shebang): #!/bin/bash або #!/bin/sh.
+
+Найпростіший скрипт складається з одного рядка:
+
+bash
+echo "Hello, World!"
+4.2. Створення, редагування і запуск скриптів
+
+Створення та редагування. Скрипт — це звичайний текстовий файл, тому його створюють у будь-якому текстовому редакторі. Найпростіший — nano:
+
+
+Також можна використовувати vi / vim (потужніший, але складніший у вивченні).
+
+Запуск скрипта можливий двома способами:
+
+bash
+# 1) передати файл як аргумент оболонці (права на виконання не потрібні)
+sh test.sh
+bash test.sh
+
+# 2) зробити файл виконуваним і запустити напряму
+chmod +x test.sh
+./test.sh
+
+Важливо: запис ./ потрібен, тому що поточного каталогу зазвичай немає в $PATH. Помилка Permission denied означає, що файл не позначено як виконуваний (потрібен chmod +x).
+
+4.5. Суть операції монтування
+
+Монтування (mount) — це підключення файлової системи (розділу диска, USB-накопичувача, ISO-образу, мережевого ресурсу) до певного каталогу в єдиному дереві каталогів Linux. Цей каталог називається точкою монтування.
+
+Навіщо потрібна:
+
+У Linux немає букв дисків (C:, D:). Усі файли знаходяться в одному дереві з коренем /, тож щоб отримати доступ до даних на новому пристрої, його треба «прикріпити» до дерева.
+Після монтування вміст пристрою доступний як звичайний каталог (наприклад, /mnt/usb).
+Перед вилученням пристрою його потрібно демонтувати (umount), щоб усі дані записалися на носій і не було втрат.
+bash
+lsblk                          # знайти пристрій, наприклад /dev/sdb1
+sudo mkdir -p /mnt/usb         # створити точку монтування
+sudo mount /dev/sdb1 /mnt/usb  # змонтувати
+ls /mnt/usb                    # працювати з файлами
+sudo umount /mnt/usb           # демонтувати
+<details> <summary><b>Додатково: відповіді на 4.3 та 4.4 (підвищений рівень)</b></summary>
+4.3. Основні компоненти материнської плати
+Компонент	Призначення
+Сокет процесора (CPU socket)	Гніздо для встановлення центрального процесора
+Чипсет (chipset / PCH)	Керує обміном даними між CPU, пам'яттю та периферією
+Слоти RAM (DIMM)	Установлення модулів оперативної пам'яті
+Слоти PCI Express	Відеокарта, мережеві та звукові карти, NVMe-адаптери
+Роз'єми SATA / M.2	Підключення HDD та SSD
+Мікросхема BIOS/UEFI	Мікропрограма початкового запуску та налаштування апаратури
+Батарейка CMOS	Живить годинник і зберігає налаштування BIOS
+VRM (модуль живлення)	Перетворює напругу для процесора
+Роз'єми живлення (24-pin, 4/8-pin)	Живлення плати і процесора від блока живлення
+Панель вводу-виводу (I/O panel)	USB, мережа, аудіо, відеовиходи
+Колодки (headers)	Передня панель корпуса, USB, вентилятори
+4.4. MBR та GPT
+MBR і GPT — це схеми розмітки (таблиці розділів) накопичувачів даних: HDD, SSD, USB-флешок, карт пам'яті.
+Характеристика	MBR	GPT
+Повна назва	Master Boot Record	GUID Partition Table
+Максимальний розмір диска	2 TiB	~9.4 ZB (практично необмежено)
+Кількість розділів	4 основні (або 3 + розширений)	128 (за замовчуванням)
+Режим завантаження	BIOS (Legacy)	UEFI
+Стійкість до пошкоджень	Одна копія таблиці	Резервна копія + контрольні суми CRC32
+</details>
+4. Хід роботи
+4.1. Початкова робота в CLI-режимі
+ Запущено ОС Linux (Ubuntu)
+ Виконано вхід та відкрито термінал
+4.2. Таблиця команд (NDG Linux Essentials, Lab 11 та Lab 12)
+Команда	Її призначення та функціональність
+cd ~/Documents	Перехід до каталогу Documents у домашньому каталозі користувача
+pwd	Виведення повного шляху до поточного каталогу
+ls -l	Виведення вмісту каталогу у розгорнутому форматі (з правами доступу)
+echo "text"	Виведення рядка тексту на екран
+nano script.sh	Створення або редагування скрипта в текстовому редакторі nano
+cat script.sh	Виведення вмісту файлу на екран
+sh script.sh	Запуск скрипта як аргумента оболонки sh (права x не потрібні)
+bash script.sh	Запуск скрипта через інтерпретатор Bash
+./script.sh	Пряме виконання скрипта з поточного каталогу (потрібне право x)
+chmod +x script.sh	Додавання права виконання (x) до файлу
+echo $PATH	Виведення списку каталогів, де оболонка шукає виконувані файли
+which bash	Показує повний шлях до виконуваного файлу команди
+#!/bin/bash	Рядок shebang (перший рядок скрипта): вказує інтерпретатор
+date	Виведення поточної дати та часу
+name="Student"	Створення змінної (без пробілів навколо =)
+echo $name	Виведення значення змінної
+read answer	Зчитування введення користувача у змінну answer
+if [ condition ]; then ... fi	Умовний оператор: виконує команди, якщо умова істинна
+for i in 1 2 3; do ... done	Цикл for: повторює команди для кожного елемента списку
+$1, $2, $#	Аргументи скрипта: перший, другий, їх кількість
+Команда	Її призначення та функціональність
+arch	Виведення архітектури процесора (наприклад, x86_64)
+lscpu	Докладна інформація про процесор: модель, ядра, потоки, частота, кеш
+cat /proc/cpuinfo	Інформація про процесор із віртуальної файлової системи /proc
+free	Стан оперативної пам'яті та swap (у кілобайтах)
+free -h	Те саме у «зручному для людини» форматі (MB, GB)
+cat /proc/meminfo	Детальна статистика використання пам'яті
+lsblk	Дерево блочних пристроїв: диски, розділи, точки монтування
+df -h	Використання місця на змонтованих файлових системах
+fdisk -l	Виведення таблиць розділів дисків (потрібен sudo)
+lspci	Список пристроїв на шині PCI (відеокарта, мережева карта, чипсет)
+lsusb	Список підключених USB-пристроїв
+lsmod	Список завантажених модулів ядра (драйверів)
+dmesg	Повідомлення ядра (виявлення апаратури під час завантаження)
+ls /dev	Список файлів пристроїв
+mount	Виведення змонтованих файлових систем або монтування пристрою
+sudo mount /dev/sdb1 /mnt	Монтування розділу /dev/sdb1 до каталогу /mnt
+sudo umount /mnt	Безпечне відключення (демонтування) файлової системи
+sudo gparted	Запуск графічного редактора розділів диска GParted
+sudo lshw -short	Короткий перелік усього апаратного забезпечення
