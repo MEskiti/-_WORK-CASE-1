@@ -17,40 +17,74 @@
 2. Словник термінів (Glossary)
 Term	Переклад	Meaning
 shell	оболонка	A program that takes commands from the user and passes them to the operating system
+
 script	скрипт, сценарій	A text file with a list of commands that are executed one by one
+
 shebang (#!)	шебанг	The first line of a script that tells the system which interpreter to use
+
 interpreter	інтерпретатор	A program that reads and executes the script (/bin/bash, /bin/sh, python3)
+
 executable	виконуваний файл	A file that has the execute (x) permission
+
 permission	право доступу	A rule that says who can read (r), write (w) or execute (x) a file
+
 chmod	change mode	A command that changes file permissions
+
 variable	змінна	A named place that stores temporary data inside a script
+
 environment variable	змінна середовища	A variable available to all child processes ($HOME, $PATH, $USER)
+
 $PATH	шлях пошуку	A list of directories where the shell looks for executable files
+
 argument	аргумент	A value passed to a command or script ($1, $2, ...)
+
 conditional	умовний оператор	A construction (if, case) that runs code only if a test is true
+
 loop	цикл	A construction (for, while) that repeats commands many times
+
 standard output (stdout)	стандартний вивід	The default stream where a program prints its results
+
 pipe (|)	канал, конвеєр	Sends the output of one command to the input of another
+
 exit status	код завершення	A number returned by a command (0 = success)
+
 hardware	апаратне забезпечення	Physical parts of a computer
+
 motherboard	материнська плата	The main board that connects all components of a computer
+
 chipset	чипсет	A set of chips that controls data flow between CPU, memory and devices
+
 firmware	мікропрограма	Low-level software stored in hardware (BIOS/UEFI)
+
 BIOS / UEFI	базова система вводу-виводу	Firmware that starts the hardware and loads the bootloader
+
 kernel	ядро	The core of the OS that manages hardware and processes
+
 driver / kernel module	драйвер / модуль ядра	Code that lets the kernel work with a device
+
 block device	блочний пристрій	A device that reads and writes data in blocks (HDD, SSD, USB drive)
+
 partition	розділ диска	A logical part of a physical disk
+
 file system	файлова система	A way of storing and organizing files on a partition (ext4, NTFS, FAT32)
+
 MBR	Master Boot Record	An old partition table scheme (up to 2 TiB, 4 primary partitions)
+
 GPT	GUID Partition Table	A modern partition table scheme used with UEFI
+
 mount	монтувати	To attach a file system to a directory in the file tree
+
 unmount	демонтувати	To safely detach a file system from the file tree
+
 mount point	точка монтування	A directory where a file system is attached
+
 RAM	оперативна пам'ять	Fast volatile memory used by running programs
+
 swap	розділ/файл підкачки	Disk space used as extra memory when RAM is full
+
 buffer / cache	буфер / кеш	Memory used to speed up access to data
-3. Завдання попередньої підготовки
+
+4. Завдання попередньої підготовки
 3.1. Поняття скриптового сценарію у командній оболонці
 
 Скриптовий сценарій (shell script) - це текстовий файл, у якому записана послідовність команд оболонки. Під час запуску оболонка (інтерпретатор) читає файл і виконує команди одну за одною.
